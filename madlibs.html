@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+    <head>
+        <script src="js/madlibs.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <title>
+            MadLibs
+        </title>
+    </head>
+    <body class="p-3 mb-2 bg-secondary text-white">
+        
+        <div class="d-grid">
+            <div class="row text-lg-center">
+                <h1>MadLibs!</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-2 img-fluid">
+                    <img src="img/madlibface.png">
+                </div>
+                <div class="col">
+
+
+                    <div class="d-grid" id="madlibInput">
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="pName1" class="h4">Person's Name</label><br>
+                                <input type="text" id="pName1" name="pName1">
+                            </div>
+                            <div class="col-sm">
+                                <label for="noun1" class="h4">Noun</label><br>
+                                <input type="text" id="noun1" name="noun1">
+                            </div>
+                            <div class="col-sm">
+                                <label for="adjFeel1" class="h4">Adjective (Feeling)</label><br>
+                                <input type="text" id="adjFeel1" name="pName1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="verb1" class="h4">Verb</label><br>
+                                <input type="text" id="verb1" name="verb1">
+                            </div>
+                            <div class="col-sm">
+                                <label for="adjFeel2" class="h4">Adjective (Feeling)</label><br>
+                                <input type="text" id="adjFeel2" name="adjFeel2">
+                            </div>
+                            <div class="col-sm">
+                                <label for="animal1" class="h4">Animal</label><br>
+                                <input type="text" id="animal1" name="animal1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="verb2" class="h4">Verb</label><br>
+                                <input type="text" id="verb2" name="verb2">
+                            </div>
+                            <div class="col-sm">
+                                <label for="color1" class="h4">Color</label><br>
+                                <input type="text" id="color1" name="color1">
+                            </div>
+                            <div class="col-sm">
+                                <label for="verb3" class="h4">Verb (Ending in "ing")</label><br>
+                                <input type="text" id="verb3" name="verb3">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="adverb1" class="h4">Adverb (Ending in "ly")</label><br>
+                                <input type="text" id="adverb1" name="adverb1">
+                            </div>
+                            <div class="col-sm">
+                                <label for="number1" class="h4">Number</label><br>
+                                <input type="text" id="number1" name="number1">
+                            </div>
+                            <div class="col-sm">
+                                <label for="time1" class="h4">Measure of Time</label><br>
+                                <input type="text" id="time1" name="time1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="color2" class="h4">Color</label><br>
+                                <input type="text" id="color2" name="color2">
+                            </div>
+                            <div class="col-sm">
+                                <label for="animal2" class="h4">Animal</label><br>
+                                <input type="text" id="animal2" name="animal2">
+                            </div>
+                            <div class="col-sm">
+                                <label for="number2" class="h4">Number</label><br>
+                                <input type="text" id="number2" name="number2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <label for="silly1" class="h4">Silly Word</label><br>
+                                <input type="text" id="silly1" name="silly1">
+                            </div>
+                            <div class="col-sm">
+                                <label class="h4">Noun</label><br>
+                                <input type="text" id="noun2" name="noun2">
+                            </div>
+                            <div class="col-sm">
+                                <br>
+                                <div class="d-grid d-md-block">
+                                    <button type="button" class="btn btn-dark h4" onclick="madlib1()">Results!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none" id="madlibResult">
+                        <div class="d-grid">
+                            <div class="row">
+                                <h2>MADLIB: A Camping We Will Go!</h2>
+                            </div>
+                            <div class="row">
+                                <p class="h5">
+                                    This weekend I am going camping with 
+                                    <label class="h4 border border-danger" id="libPName1">test</label>. 
+                                    I packed my lantern, sleeping bag, and 
+                                    <label class="h4 border border-danger" id="libNoun1"></label>. 
+                                    I am so 
+                                    <label class="h4 border border-danger" id="libAdjFeel1"></label> 
+                                    to 
+                                    <label class="h4 border border-danger" id="libVerb1"></label> 
+                                    in a tent. I am 
+                                    <label class="h4 border border-danger" id="libAdjFeel2"></label> 
+                                    we might see a 
+                                    <label class="h4 border border-danger" id="libAnimal1"></label>, 
+                                    they are kind of dangerous. We are going to hik, fish, and 
+                                    <label class="h4 border border-danger" id="libVerb2"></label>. 
+                                    I have heard that the 
+                                    <label class="h4 border border-danger" id="libColor1"></label> 
+                                    lake is great for 
+                                    <label class="h4 border border-danger" id="libVerb3"></label>. 
+                                    Then we will 
+                                    <label class="h4 border border-danger" id="libAdverb1"></label> 
+                                    hike through the forest for 
+                                    <label class="h4 border border-danger" id="libNumber1"></label> 
+                                    <label class="h4 border border-danger" id="libTime1"></label>. 
+                                    If I see a 
+                                    <label class="h4 border border-danger" id="libColor2"></label> 
+                                    <label class="h4 border border-danger" id="libAnimal2"></label> 
+                                    when hiking, I am going to bring it home as a pet! At night we will tell 
+                                    <label class="h4 border border-danger" id="libNumber2"></label> 
+                                    <label class="h4 border border-danger" id="libSilly1"></label> 
+                                    stories and roast 
+                                    <label class="h4 border border-danger" id="libNoun2"></label> 
+                                    around the campfire.
+                                    <button type="button" class="btn btn-dark h4" onclick="reset1()">Reset!</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        <div class="d-block text-center">
+            <h3>This MadLib was sourced from <a href="https://www.thepaintedturtle.org/sites/main/files/file-attachments/mad_libs.pdf">The Painted Turtle Outpost</a>.</h3>
+        </div>
+    </body>
